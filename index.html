@@ -1,79 +1,93 @@
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        
+        <!-- Spesifikt for mobile enheter -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Webatlas-kartografikurs-showcase : ">
+        <link rel="stylesheet" href="css/normalize.min.css">
+        
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+        <!-- For kart i fullskjerm -->
+        <link rel="stylesheet" href="css/fullscreen.css" />
 
-    <title>Webatlas-kartografikurs-showcase</title>
-  </head>
+        <!-- Leaflet, Norkart edition -->
+        <link rel="stylesheet" href="http://tsadm.webatlas.no/sh/3/v/030714/webatlas.css" />
+        <link rel="stylesheet" href="css/L.Control.Sidebar.css">
 
-  <body>
+        <link rel="stylesheet" href="css/main.css">
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/Norkart/webatlas-kartografikurs-showcase">View on GitHub</a>
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
 
-          <h1 id="project_title">Webatlas-kartografikurs-showcase</h1>
-          <h2 id="project_tagline"></h2>
+        <div id="map"></div>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/Norkart/webatlas-kartografikurs-showcase/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/Norkart/webatlas-kartografikurs-showcase/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+        <div id="sidebar">
+<h1 id="webatlas-high-quality-web-maps-from-proprietary-to-open-source">WEBATLAS</h1>
+<h3>High quality web maps from proprietary to Open Source</h3>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+<p>Demo: <a href="http://norkart.github.io/webatlas-kartografikurs-showcase/">http://norkart.github.io/webatlas-foss4g-showcase/</a> </p>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p><strong>Facts:</strong></p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+<ul>
+<li>WEBATLAS is a collection  of geographical related data – collected, analyzed, organized and made available to end users as raw data, web services or customized products.</li>
+<li>WEBATLAS is developed and maintained by Norkart – Norways leading GIS company established as early as 1961.</li>
+<li>Topographic maps served as WMS or TMS is the backbone of WEBATLAS.</li>
+<li>WEBATLAS established in 2006 – approx 10 mill hits annually.</li>
+<li>2014 – estimated 1.5 billion hits. </li>
+<li>Directory service (1881.no) and property sales(Finn.no) the biggest clients along with several public sector departments. </li>
+<li>Covers Norway with highly detailed and accurate maps – OSM used in the rest of Europe.</li>
+</ul>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p><strong>Situation 2006 – 2013:</strong></p>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<ul>
+<li>WEBATLAS powered by in-house developed WMS server and TMS.</li>
+<li>All mapdata in Norway subject to fees and taxation based on use – a little nightmare to administrate. </li>
+<li>Rapid growth a challenge to stability and performance. </li>
+</ul>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p><strong>2013 – 2014:</strong></p>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<ul>
+<li>Norwegian Mapping Authority releases a lot of products. Maps that become freely available includes: <br>
+o   Topographic maps covering scales 1:50000 and up <br>
+o   Road data from Norwegian Public Roads Administration <br>
+o   Nautical charts  <br>
+o   Place names <br>
+o   Administrative borders <br>
+o   DTM</li>
+<li>This made administration easier and cheaper – to the benefit of our clients </li>
+<li>After successful operation on OSM data in Europe the last two years: <br>
+o   Postgis replaced the old WMS – server’s file based system  <br>
+o   Geoserver replaced the old WMS server <br>
+o   Mapproxy replaced the old tile server</li>
+<li>After ½ year in operation, we’ve got rid of most hickups and are faster and more stable than ever. </li>
+</ul>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>During the entire period, a separate WMS specially design to handle raster data quickly has been in operation. This one is also largely based on OpenSource. Unfortunately, ortophoto is still subject to heavy fees.  </p>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<p>Please note that the most detailed data such as cadastre, buildings etc is still not free.  </p>
+        </div>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>');</script>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Webatlas-kartografikurs-showcase maintained by <a href="https://github.com/Norkart">Norkart</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+        <!-- hent inn Webatlas.js-biblioteket -->
+        <script src="http://tsadm.webatlas.no/sh/3/v/030714/webatlas.js" type="text/javascript"></script>
+        <script src="js/vendor/L.Control.Sidebar.js"></script>
+        <script src="js/main.js"></script>
+    </body>
 </html>
