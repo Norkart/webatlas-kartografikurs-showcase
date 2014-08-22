@@ -14,6 +14,7 @@ $(document).ready(function() {
         maxZoom: 30,
         customer: 'WA_JS_V3_Coursework'
     });
+    map.setView(new L.LatLng(64.58618480339979, 13.6796875), 5);
     //map.removeControl(map.LayerControl)
     map.removeControl(map.zoomControl);
     map.LayerControl._expand();
@@ -29,6 +30,7 @@ $(document).ready(function() {
 
     map.addLayer(wms);
     map.LayerControl.addBaseLayer(wms, "Webatlas WMS");
+
 
     var sidebar = L.control.sidebar('sidebar', {
         position: 'left'
