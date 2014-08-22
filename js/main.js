@@ -11,7 +11,7 @@
 $(document).ready(function() {
     //use the 
     map = new WebatlasMap('map', {
-        //maxZoom: 14,
+        maxZoom: 30,
         customer: 'WA_JS_V3_Coursework'
     });
     //map.removeControl(map.LayerControl)
@@ -41,7 +41,7 @@ $(document).ready(function() {
     })
 
 
-
+    /*
     var norkartIcon = L.icon({
         iconUrl: 'img/norkartIcon.png',
         iconSize: [15, 20],
@@ -128,6 +128,7 @@ $(document).ready(function() {
             nextRoutePoint_index = 0;
         }
     }
+    */
 });
 
 L.ImageOverlay.WMS = L.ImageOverlay.extend({
